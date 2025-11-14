@@ -1,0 +1,128 @@
+/* Design System: cores, tipografia, espaçamento */
+:root {
+    /* Paleta principal (8+ cores) */
+    --brand-50:#f5f3ff;
+    --brand-100:#ede9fe;
+    --brand-300:#c4b5fd;
+    --brand-500:#8b5cf6;
+    --brand-700:#6d28d9;
+    --emerald-500:#10b981;
+    --sky-500:#0ea5e9;
+    --amber-500:#f59e0b;
+    --rose-500:#f43f5e;
+    --slate-50:#f8fafc;
+    --slate-100:#f1f5f9;
+    --slate-300:#cbd5e1;
+    --slate-700:#334155;
+    --slate-900:#020617;
+  
+    --bg: #020617;
+    --surface: #111827;
+    --text: var(--slate-50);
+    --muted: var(--slate-300);
+  
+    --primary: var(--brand-500);
+    --secondary: var(--emerald-500);
+    --success: var(--emerald-500);
+    --warning: var(--amber-500);
+    --danger: var(--rose-500);
+    --info: var(--sky-500);
+  
+    /* Tipografia (5 tamanhos+) */
+    --font-xs: clamp(.75rem, .7rem + .2vw, .8rem);
+    --font-sm: clamp(.875rem, .84rem + .2vw, .95rem);
+    --font-md: 1rem;
+    --font-lg: clamp(1.25rem, 1.1rem + .5vw, 1.5rem);
+    --font-xl: clamp(1.6rem, 1.3rem + 1vw, 2rem);
+    --font-2xl: clamp(2rem, 1.5rem + 1.6vw, 2.6rem);
+  
+    /* Espaçamentos (escala 8px) */
+    --sp-1: 8px;
+    --sp-2: 16px;
+    --sp-3: 24px;
+    --sp-4: 32px;
+    --sp-5: 48px;
+    --sp-6: 64px;
+  
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --shadow-1: 0 2px 8px rgba(0,0,0,.35);
+  
+    color-scheme: dark;
+  }
+  
+  /* Base */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+    background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  img,
+  picture,
+  svg,
+  video {
+    max-width: 100%;
+    display: block;
+  }
+  
+  a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  a:focus,
+  button:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 3px solid var(--secondary);
+    outline-offset: 2px;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: var(--sp-2);
+    padding-block: var(--sp-2);
+  }
+  
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  /* Títulos */
+  .h1 { font-size: var(--font-2xl); margin: .2rem 0; }
+  .h2 { font-size: var(--font-xl); margin: .2rem 0; }
+  .h3 { font-size: var(--font-lg); margin: .2rem 0; }
+  .text-muted { color: var(--muted); }
+  
+  /* Badges */
+  .badge {
+    display: inline-block;
+    padding: .25rem .6rem;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, .2);
+    border: 1px solid rgba(148, 163, 184, .4);
+    font-size: var(--font-xs);
+  }
+  

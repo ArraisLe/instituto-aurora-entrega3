@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instituto Aurora — Início</title>
+
+  <link rel="preload" as="image" href="assets/img/placeholder.svg">
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="visually-hidden" href="#conteudo">Ir para o conteúdo principal</a>
+
+  <header class="header">
+    <div class="container brand" role="banner">
+      <img src="assets/img/placeholder.svg" width="44" height="44" alt="Logo do Instituto Aurora">
+      <div>
+        <strong>Instituto Aurora</strong><br>
+        <span class="badge">Oportunidades que iluminam trajetórias</span>
+      </div>
+    </div>
+
+    <nav aria-label="principal" class="nav">
+      <div class="container navbar">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+        <div id="menu" class="menu nav-links">
+          <a href="index.html" aria-current="page">Início</a>
+          <a href="projetos.html">Projetos</a>
+          <div class="dropdown">
+            <button type="button" aria-haspopup="true" aria-expanded="false">Mais</button>
+            <div class="dropdown-menu" role="menu">
+              <a href="cadastro.html" role="menuitem">Cadastro</a>
+              <a href="galeria.html" role="menuitem">Galeria</a>
+              <a href="#" role="menuitem" onclick="showToast('PIX: doacoes@institutoaurora.org')">Como doar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="container main">
+    <div class="alert alert-info">
+      Design system carregado com sucesso.
+    </div>
+
+    <section class="hero">
+      <h1>Missão, visão e valores</h1>
+      <p>Conteúdo institucional.</p>
+      <img src="assets/img/placeholder.svg" alt="Hero">
+    </section>
+    
+    <!-- NOSSA ÁREA SPA COMEÇA AQUI -->
+    <section id="app-spa" class="mt-3">
+      <h2 class="h2">Área dinâmica (SPA)</h2>
+      <p class="text-muted">Clique nos botões para trocar o conteúdo sem recarregar a página.</p>
+    
+      <nav class="spa-tabs" style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px;">
+        <button class="btn btn-outline" data-view="inicio">Resumo</button>
+        <button class="btn btn-outline" data-view="projetos">Projetos</button>
+        <button class="btn btn-outline" data-view="depoimentos">Depoimentos</button>
+      </nav>
+    
+      <div id="spa-view" class="mt-3 card p-3"></div>
+    </section>
+    <!-- FIM DA ÁREA SPA -->
+    
+    <section class="cards">
+      <article class="card"><h3>Histórico</h3></article>
+      <article class="card"><h3>Equipe</h3></article>
+      <article class="card"><h3>Transparência</h3></article>
+    </section>    
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2025 Instituto Aurora</div>
+  </footer>
+  
+  <script src="assets/js/masks.js" defer></script>
+  <div class="toast-stack" aria-live="polite"></div>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/spa.js" defer></script>
+  </body>
+  </html>
+  

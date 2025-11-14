@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instituto Aurora — Galeria</title>
+
+  <link rel="preload" as="image" href="assets/img/foto1.jpg">
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="visually-hidden" href="#conteudo">Ir para o conteúdo principal</a>
+
+  <header class="header">
+    <div class="container brand">
+      <img src="assets/img/placeholder.svg" width="44" height="44" alt="Logo do Instituto Aurora">
+      <div>
+        <strong>Instituto Aurora</strong><br>
+        <span class="badge">Oportunidades que iluminam trajetórias</span>
+      </div>
+    </div>
+
+    <nav aria-label="principal" class="nav">
+      <div class="container navbar">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+        <div id="menu" class="menu nav-links">
+          <a href="index.html">Início</a>
+          <a href="projetos.html">Projetos</a>
+          <div class="dropdown">
+            <button type="button" aria-haspopup="true" aria-expanded="false">Mais</button>
+            <div class="dropdown-menu" role="menu">
+              <a href="cadastro.html" role="menuitem">Cadastro</a>
+              <a href="galeria.html" role="menuitem" aria-current="page">Galeria</a>
+              <a href="#" role="menuitem" onclick="showToast('PIX: doacoes@institutoaurora.org')">Como doar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="container main">
+    <header>
+      <h1 class="h1">Galeria</h1>
+      <p class="text-muted">Registros dos nossos projetos e ações.</p>
+    </header>
+
+    <section class="gallery-grid mt-3">
+      <figure>
+        <img src="assets/img/foto1.jpg" alt="Cena de aula com crianças">
+        <figcaption class="text-muted">Reforço escolar.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/foto2.jpg" alt="Voluntários de mãos dadas">
+        <figcaption class="text-muted">Voluntariado unido.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/foto1.jpg" alt="Professor auxiliando aluno">
+        <figcaption class="text-muted">Atenção individual.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/foto2.jpg" alt="Grupo de voluntários sorrindo">
+        <figcaption class="text-muted">Energia positiva.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2025 Instituto Aurora
+    </div>
+  </footer>
+
+  <div class="toast-stack" aria-live="polite" aria-atomic="true"></div>
+  <script src="assets/js/masks.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

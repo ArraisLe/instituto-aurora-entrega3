@@ -1,0 +1,10 @@
+/* Ajustes finos do projeto */
+
+figure {
+    margin: 0;
+  }
+  
+  figure img {
+    border-radius: var(--radius-md);
+  }
+  

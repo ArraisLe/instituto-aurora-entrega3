@@ -1,0 +1,130 @@
+/* Layout: grid 12 colunas + breakpoints */
+
+:root {
+  --gap: 16px;
+}
+
+/* Breakpoints (5+) */
+@media (min-width: 360px) { :root { --gap: 16px; } }
+@media (min-width: 480px) { :root { --gap: 18px; } }
+@media (min-width: 768px) { :root { --gap: 20px; } }
+@media (min-width: 1024px){ :root { --gap: 22px; } }
+@media (min-width: 1280px){ :root { --gap: 24px; } }
+
+/* Grid 12 colunas */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--gap);
+}
+
+.col-12 { grid-column: span 12; }
+.col-md-6 { grid-column: span 12; }
+
+@media (min-width: 768px) {
+  .col-md-6 { grid-column: span 6; }
+}
+
+/* Estrutura geral */
+.header {
+  background: #020617;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(148,163,184,.3);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding-block: .7rem;
+}
+
+.brand img {
+  border-radius: 999px;
+}
+
+.main {
+  min-height: 60vh;
+}
+
+.footer {
+  background: #020617;
+  padding: var(--sp-4) var(--sp-2);
+  color: var(--muted);
+  font-size: var(--font-sm);
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--gap);
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: var(--sp-2);
+  box-shadow: var(--shadow-1);
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  gap: var(--gap);
+  align-items: center;
+  padding-block: var(--sp-4);
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 1.2fr .8fr;
+  }
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+th, td {
+  padding: .75rem 1rem;
+  border-bottom: 1px solid rgba(148,163,184,.25);
+  text-align: left;
+}
+
+th {
+  background: #020617;
+}
+
+/* Galeria (1 col mobile, 2 tablet, 4 desktop) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+
+.gallery-grid figure {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 8px;
+  box-shadow: var(--shadow-1);
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
