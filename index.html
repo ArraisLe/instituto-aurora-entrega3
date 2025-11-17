@@ -24,23 +24,46 @@
       </div>
     </div>
 
-    <nav aria-label="principal" class="nav">
-      <div class="container navbar">
-        <button class="menu-toggle" aria-expanded="false" aria-controls="menu">☰ Menu</button>
-        <div id="menu" class="menu nav-links">
-          <a href="index.html" aria-current="page">Início</a>
-          <a href="projetos.html">Projetos</a>
-          <div class="dropdown">
-            <button type="button" aria-haspopup="true" aria-expanded="false">Mais</button>
-            <div class="dropdown-menu" role="menu">
-              <a href="cadastro.html" role="menuitem">Cadastro</a>
-              <a href="galeria.html" role="menuitem">Galeria</a>
-              <a href="#" role="menuitem" onclick="showToast('PIX: doacoes@institutoaurora.org')">Como doar</a>
-            </div>
+      <nav aria-label="principal" class="nav">
+    <div class="container navbar">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+
+      <div id="menu" class="menu nav-links">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <div class="dropdown">
+          <button type="button" aria-haspopup="true" aria-expanded="false">Mais</button>
+          <div class="dropdown-menu" role="menu">
+            <a href="cadastro.html" role="menuitem">Cadastro</a>
+            <a href="galeria.html" role="menuitem">Galeria</a>
+            <a href="#" role="menuitem" onclick="showToast('PIX: doacoes@institutoaurora.org')">Como doar</a>
           </div>
         </div>
       </div>
-    </nav>
+
+      <!-- BOTÕES DE ACESSIBILIDADE -->
+      <div class="botoes-acessibilidade">
+        <button
+          type="button"
+          id="btn-dark-mode"
+          class="botao-acessibilidade"
+          aria-pressed="false"
+        >
+          Modo escuro
+        </button>
+
+        <button
+          type="button"
+          id="btn-alto-contraste"
+          class="botao-acessibilidade"
+          aria-pressed="false"
+        >
+          Alto contraste
+        </button>
+      </div>
+    </div>
+  </nav>
+
   </header>
 
     <main id="conteudo-principal">
