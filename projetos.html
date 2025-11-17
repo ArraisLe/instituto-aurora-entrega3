@@ -10,13 +10,14 @@
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/utilities.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 <body>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
   <a class="visually-hidden" href="#conteudo">Ir para o conteúdo principal</a>
 
-  <header class="header">
-    <div class="container brand">
+    <header class="header">
+    <div class="container brand" role="banner">
       <img src="assets/img/placeholder.svg" width="44" height="44" alt="Logo do Instituto Aurora">
       <div>
         <strong>Instituto Aurora</strong><br>
@@ -27,6 +28,7 @@
     <nav aria-label="principal" class="nav">
       <div class="container navbar">
         <button class="menu-toggle" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+
         <div id="menu" class="menu nav-links">
           <a href="index.html">Início</a>
           <a href="projetos.html" aria-current="page">Projetos</a>
@@ -39,11 +41,32 @@
             </div>
           </div>
         </div>
+
+        <!-- BOTÕES DE ACESSIBILIDADE -->
+        <div class="botoes-acessibilidade">
+          <button
+            type="button"
+            id="btn-dark-mode"
+            class="botao-acessibilidade"
+            aria-pressed="false"
+          >
+            Modo escuro
+          </button>
+
+          <button
+            type="button"
+            id="btn-alto-contraste"
+            class="botao-acessibilidade"
+            aria-pressed="false"
+          >
+            Alto contraste
+          </button>
+        </div>
       </div>
     </nav>
   </header>
 
-  <main id="conteudo" class="container main">
+  <main id="conteudo-principal">
     <header>
       <h1 class="h1">Projetos sociais</h1>
       <p class="text-muted">Conheça nossos principais programas de impacto.</p>
@@ -131,5 +154,7 @@
   <div class="toast-stack" aria-live="polite" aria-atomic="true"></div>
   <script src="assets/js/masks.js" defer></script>
   <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/spa.js" defer></script>
+  <script src="assets/js/acessibilidade.min.js" defer></script>
 </body>
 </html>

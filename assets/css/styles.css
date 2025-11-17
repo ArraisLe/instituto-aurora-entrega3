@@ -7,4 +7,124 @@ figure {
   figure img {
     border-radius: var(--radius-md);
   }
-  
+  /* ===== ACESSIBILIDADE: FOCUS VISÍVEL ===== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #ffbf00;
+  outline-offset: 3px;
+}
+
+/* Link para pular direto para o conteúdo principal */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 12px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus-visible {
+  top: 10px;
+}
+
+/* ===== MODO ESCURO ===== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-mode a {
+  color: #ffdd57;
+}
+
+/* ===== ALTO CONTRASTE ===== */
+body.high-contrast {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.high-contrast a {
+  color: #ffff00;
+}
+
+/* Ajuste de contraste para botões genéricos */
+button,
+.botao,
+.btn {
+  background-color: #005bbb;
+  color: #ffffff;
+}
+/* ============================
+ ACESSIBILIDADE: FOCUS VISÍVEL
+ ============================ */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+outline: 3px solid #ffbf00;
+outline-offset: 3px;
+}
+
+/* Link para pular direto para o conteúdo principal */
+.skip-link {
+position: absolute;
+top: -40px;
+left: 16px;
+background-color: #000000;
+color: #ffffff;
+padding: 8px 12px;
+border-radius: 4px;
+text-decoration: none;
+z-index: 1000;
+}
+
+.skip-link:focus-visible {
+top: 16px;
+}
+
+/* ============================
+ BOTÕES DE ACESSIBILIDADE NO HEADER
+ ============================ */
+.botoes-acessibilidade {
+display: flex;
+gap: 8px;
+align-items: center;
+margin-left: auto;
+}
+
+.botao-acessibilidade {
+font-size: 0.875rem;
+padding: 6px 12px;
+border-radius: 999px;
+border: 1px solid currentColor;
+background-color: transparent;
+cursor: pointer;
+}
+
+/* ============================
+ TEMAS: MODO ESCURO E ALTO CONTRASTE
+ ============================ */
+body.dark-mode {
+background-color: #121212;
+color: #f5f5f5;
+}
+
+body.dark-mode a {
+color: #ffdd57;
+}
+
+body.high-contrast {
+background-color: #000000;
+color: #ffffff;
+}
+
+body.high-contrast a {
+color: #ffff00;
+}
